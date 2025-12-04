@@ -174,9 +174,7 @@ export default function TabooGame() {
         return;
       }
       setErrorMessage(null);
-      if (response.roomId) {
-        setActiveRoomId(response.roomId);
-      }
+      setActiveRoomId(response.roomId ?? null);
     });
   };
 
@@ -203,9 +201,7 @@ export default function TabooGame() {
         }
 
         setErrorMessage(null);
-        if (response.roomId) {
-          setActiveRoomId(response.roomId);
-        }
+        setActiveRoomId(response.roomId ?? null);
       }
     );
   };
