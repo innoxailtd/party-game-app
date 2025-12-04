@@ -88,7 +88,7 @@ export default function TabooGame() {
 
     socket.on("connect", () => {
       setConnectionStatus("connected");
-      setSelfSocketId(socket.id);
+      setSelfSocketId(socket.id ?? null);
     });
 
     socket.on("connect_error", () => {
